@@ -5,39 +5,48 @@ class MyStoryWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: [
-        Stack(
-          children: [
-            Container(
-              margin: const EdgeInsets.all(8),
-              width: 75,
-              height: 75,
-              decoration: BoxDecoration(
-                shape: BoxShape.circle,
-                color: Colors.grey[300],
-                image: const DecorationImage(
-                  image: NetworkImage('https://picsum.photos/150?random=8'), // Replace with actual user image
-                  fit: BoxFit.cover,
+    return Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 6.0),
+      child: Column(
+        mainAxisSize: MainAxisSize.min,
+        children: [
+          Stack(
+            children: [
+              CircleAvatar(
+                radius: 33,
+                backgroundColor: Colors.grey[850],
+                backgroundImage: const NetworkImage(
+                  'https://picsum.photos/150?random=8',
                 ),
               ),
-            ),
-            Positioned(
-              bottom: 8,
-              right: 8,
-              child: Container(
-                decoration: BoxDecoration(
-                  border: Border.all(color: Colors.white, width: 2),
-                  shape: BoxShape.circle,
-                  color: Colors.blue,
+              Positioned(
+                bottom: 0,
+                right: 0,
+                child: Container(
+                  width: 22,
+                  height: 22,
+                  decoration: BoxDecoration(
+                    color: const Color(0xFF0095F6), // Instagram blue
+                    shape: BoxShape.circle,
+                    border: Border.all(color: Colors.black, width: 2),
+                  ),
+                  child: const Icon(Icons.add, color: Colors.white, size: 14),
                 ),
-                child: const Icon(Icons.add, color: Colors.white, size: 20),
               ),
+            ],
+          ),
+          const SizedBox(height: 5),
+          const SizedBox(
+            width: 72,
+            child: Text(
+              'Your story',
+              style: TextStyle(fontSize: 11, color: Colors.white),
+              overflow: TextOverflow.ellipsis,
+              textAlign: TextAlign.center,
             ),
-          ],
-        ),
-        const Text('Your Story', style: TextStyle(fontSize: 12)),
-      ],
+          ),
+        ],
+      ),
     );
   }
 }
