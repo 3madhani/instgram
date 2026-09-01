@@ -90,6 +90,7 @@ class _HomePageState extends State<HomePage> {
         ],
       ),
       body: CustomScrollView(
+        physics: const ClampingScrollPhysics(),
         slivers: [
           SliverToBoxAdapter(
             child: Column(

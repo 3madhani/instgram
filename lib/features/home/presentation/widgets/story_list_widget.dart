@@ -14,6 +14,7 @@ class StoryListWidget extends StatelessWidget {
       height: 108,
       child: ListView.builder(
         scrollDirection: Axis.horizontal,
+        physics: const ClampingScrollPhysics(),
         itemCount: stories.length + 1, // +1 for "My Story"
         itemBuilder: (context, index) {
           if (index == 0) {
