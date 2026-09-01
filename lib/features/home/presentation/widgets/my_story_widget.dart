@@ -17,7 +17,7 @@ class MyStoryWidget extends StatelessWidget {
                 shape: BoxShape.circle,
                 color: Colors.grey[300],
                 image: const DecorationImage(
-                  image: NetworkImage('https://via.placeholder.com/150'), // Replace with actual user image
+                  image: NetworkImage('https://picsum.photos/150?random=8'), // Replace with actual user image
                   fit: BoxFit.cover,
                 ),
               ),

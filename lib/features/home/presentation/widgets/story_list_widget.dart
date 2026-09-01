@@ -11,7 +11,7 @@ class StoryListWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: 110,
+      height: 125,
       child: ListView.builder(
         scrollDirection: Axis.horizontal,
         itemCount: stories.length + 1, // +1 for "My Story"

@@ -11,19 +11,19 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     // Dummy Data
     final List<StoryModel> dummyStories = [
-      StoryModel(id: '1', username: 'john_doe', userProfileImageUrl: 'https://via.placeholder.com/150'),
-      StoryModel(id: '2', username: 'jane_smith', userProfileImageUrl: 'https://via.placeholder.com/150'),
-      StoryModel(id: '3', username: 'mike_ross', userProfileImageUrl: 'https://via.placeholder.com/150', isViewed: true),
-      StoryModel(id: '4', username: 'sarah_p', userProfileImageUrl: 'https://via.placeholder.com/150'),
-      StoryModel(id: '5', username: 'alex_k', userProfileImageUrl: 'https://via.placeholder.com/150', isViewed: true),
+      StoryModel(id: '1', username: 'john_doe', userProfileImageUrl: 'https://picsum.photos/150?random=1'),
+      StoryModel(id: '2', username: 'jane_smith', userProfileImageUrl: 'https://picsum.photos/150?random=2'),
+      StoryModel(id: '3', username: 'mike_ross', userProfileImageUrl: 'https://picsum.photos/150?random=3', isViewed: true),
+      StoryModel(id: '4', username: 'sarah_p', userProfileImageUrl: 'https://picsum.photos/150?random=4'),
+      StoryModel(id: '5', username: 'alex_k', userProfileImageUrl: 'https://picsum.photos/150?random=5', isViewed: true),
     ];
 
     final List<PostModel> dummyPosts = [
       PostModel(
         id: '1',
         username: 'john_doe',
-        userProfileImageUrl: 'https://via.placeholder.com/150',
-        postImageUrl: 'https://via.placeholder.com/600',
+        userProfileImageUrl: 'https://picsum.photos/150?random=1',
+        postImageUrl: 'https://picsum.photos/600?random=6',
         caption: 'Enjoying the beautiful sunny day! ☀️ #sunshine #vibes',
         likesCount: 124,
         commentsCount: 15,
@@ -32,8 +32,8 @@ class HomePage extends StatelessWidget {
       PostModel(
         id: '2',
         username: 'jane_smith',
-        userProfileImageUrl: 'https://via.placeholder.com/150',
-        postImageUrl: 'https://via.placeholder.com/600',
+        userProfileImageUrl: 'https://picsum.photos/150?random=2',
+        postImageUrl: 'https://picsum.photos/600?random=7',
         caption: 'Just launched my new app. Check it out guys 🚀',
         likesCount: 890,
         commentsCount: 104,
