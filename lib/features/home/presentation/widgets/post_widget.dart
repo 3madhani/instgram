@@ -136,32 +136,37 @@ class _PostWidgetState extends State<PostWidget> {
         ),
 
         // ── Post Image ───────────────────────────────────────────
-        Image.network(
-          widget.post.postImageUrl,
-          width: double.infinity,
-          height: 370,
-          fit: BoxFit.cover,
-          loadingBuilder: (context, child, progress) {
-            if (progress == null) return child;
-            return Container(
+        GestureDetector(
+          onDoubleTap: () {
+            _toggleLike();
+          },
+          child: Image.network(
+            widget.post.postImageUrl,
+            width: double.infinity,
+            height: 370,
+            fit: BoxFit.cover,
+            loadingBuilder: (context, child, progress) {
+              if (progress == null) return child;
+              return Container(
+                height: 370,
+                color: Colors.grey[900],
+                child: const Center(
+                  child: CircularProgressIndicator(
+                    color: Colors.white24,
+                    strokeWidth: 1.5,
+                  ),
+                ),
+              );
+            },
+            errorBuilder: (context, error, stackTrace) => Container(
               height: 370,
               color: Colors.grey[900],
               child: const Center(
-                child: CircularProgressIndicator(
-                  color: Colors.white24,
-                  strokeWidth: 1.5,
+                child: Icon(
+                  Icons.broken_image_outlined,
+                  color: Colors.white30,
+                  size: 48,
                 ),
-              ),
-            );
-          },
-          errorBuilder: (context, error, stackTrace) => Container(
-            height: 370,
-            color: Colors.grey[900],
-            child: const Center(
-              child: Icon(
-                Icons.broken_image_outlined,
-                color: Colors.white30,
-                size: 48,
               ),
             ),
           ),
